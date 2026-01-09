@@ -1,0 +1,621 @@
+.quote-wrapper {
+  font-family: 'Roboto', Arial, sans-serif;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  background-color: #fff;
+  min-height: 100vh;
+  position: relative;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  color: #202124;
+}
+
+.watermark {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-30deg);
+  font-size: 10rem;
+  color: rgba(0, 0, 0, 0.02);
+  z-index: 0;
+  pointer-events: none;
+  font-weight: 900;
+  letter-spacing: 10px;
+}
+
+.google-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  border-bottom: 1px solid #e0e0e0;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 100;
+  width: 100%;
+  max-width: 100%;
+}
+
+.nav-brand {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.brand-c { color: #4285F4; }
+.brand-o { color: #EA4335; }
+.brand-d { color: #FBBC05; }
+.brand-v { color: #4285F4; }
+.brand-e { color: #34A853; }
+.brand-r { color: #EA4335; }
+.brand-t { color: #FBBC05; }
+.brand-e2 { color: #4285F4; }
+.brand-x { color: #34A853; }
+
+.client-badge {
+  background: #f8f9fa;
+  padding: 8px 15px;
+  border-radius: 20px;
+  border: 1px solid #dadce0;
+  font-size: 0.9rem;
+}
+
+.proposal-body {
+  padding: 40px;
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-section {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #5f6368;
+  font-size: 1.2rem;
+}
+
+.accordion-container {
+  margin-bottom: 60px;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #dadce0;
+}
+
+.accordion-trigger {
+  padding: 24px 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s;
+}
+
+.accordion-trigger:hover h3 {
+  color: #1a73e8;
+}
+
+.accordion-trigger h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #3c4043;
+  margin: 0;
+}
+
+.icon {
+  font-size: 1.5rem;
+  color: #70757a;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease;
+  padding: 0;
+}
+
+.accordion-item.open .accordion-content {
+  max-height: 5000px;
+  padding: 20px 0 40px 0;
+}
+
+/* Ensure proper text margins for readability */
+.section-content p,
+.section-content ul,
+.section-content ol {
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.section-content ul,
+.section-content ol {
+  padding-left: 20px;
+}
+
+@media (min-width: 769px) {
+  .section-content {
+    padding: 0 20px;
+  }
+  
+  .section-content p,
+  .section-content ul,
+  .section-content ol {
+    max-width: 100%;
+  }
+}
+
+.section-content {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #3c4043;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.section-content h4 {
+  margin: 25px 0 15px 0;
+  color: #202124;
+  font-size: 1.1rem;
+}
+
+.section-content p {
+  margin-bottom: 15px;
+}
+
+.tech-table, .pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background: #fff;
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  overflow: hidden;
+  display: table;
+}
+
+/* Table wrapper for horizontal scroll on mobile */
+.table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 20px 0;
+}
+
+.tech-table th, .pricing-table th {
+  background: #f8f9fa;
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #dadce0;
+  font-weight: 500;
+  color: #5f6368;
+}
+
+.tech-table td, .pricing-table td {
+  padding: 15px;
+  border-bottom: 1px solid #f1f3f4;
+  vertical-align: top;
+}
+
+.total-row {
+  background: #e8f0fe;
+  font-size: 1.2rem;
+  color: #1967d2;
+}
+
+.justification-box {
+  background: #e6f4ea;
+  padding: 25px;
+  border-radius: 8px;
+  border-left: 5px solid #34a853;
+  margin-top: 30px;
+}
+
+.justification-box h4 {
+  color: #137333;
+  margin-top: 0 !important;
+}
+
+.guarantee-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.guarantee-card {
+  padding: 25px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border: 1px solid #dadce0;
+}
+
+.guarantee-card h4 {
+  color: #1a73e8;
+  margin-top: 0 !important;
+}
+
+.final-commitment {
+  text-align: center;
+  padding: 60px 40px;
+  background: #202124;
+  color: #fff;
+  border-radius: 16px;
+  margin-top: 40px;
+}
+
+.final-commitment h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.final-commitment h4 {
+  margin-top: 40px;
+  margin-bottom: 30px;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.delivery-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin: 30px 0;
+  text-align: left;
+}
+
+.delivery-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #34a853;
+}
+
+.delivery-item strong {
+  display: block;
+  margin-bottom: 10px;
+  color: #fbbc04;
+  font-size: 1.1rem;
+}
+
+.delivery-item p {
+  margin: 0;
+  color: #e8eaed;
+  font-size: 0.95rem;
+}
+
+.investment-highlight {
+  margin-top: 40px;
+  padding: 30px;
+  background: rgba(52, 168, 83, 0.2);
+  border-radius: 12px;
+  border: 2px solid #34a853;
+}
+
+.investment-highlight h4 {
+  font-size: 2rem;
+  color: #fbbc04;
+  margin-bottom: 15px;
+}
+
+.investment-highlight p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.google-footer {
+  text-align: center;
+  padding: 40px;
+  border-top: 1px solid #e0e0e0;
+  color: #70757a;
+  font-size: 0.9rem;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Tablet and Small Laptop (768px - 1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .proposal-body {
+    padding: 30px 40px;
+    max-width: 100%;
+  }
+  
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .tech-table, .pricing-table {
+    font-size: 0.9rem;
+  }
+  
+  .tech-table th, .pricing-table th,
+  .tech-table td, .pricing-table td {
+    padding: 12px;
+  }
+  
+  .guarantee-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .delivery-summary {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  
+  .watermark {
+    font-size: 7rem;
+  }
+}
+
+/* Mobile (up to 768px) */
+@media (max-width: 768px) {
+  .quote-wrapper {
+    box-shadow: none;
+  }
+  
+  .google-header {
+    padding: 15px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  .nav-brand {
+    font-size: 1.5rem;
+  }
+  
+  .client-badge {
+    font-size: 0.85rem;
+    padding: 6px 12px;
+  }
+  
+  .proposal-body {
+    padding: 20px 15px;
+    max-width: 100%;
+  }
+  
+  .hero-section {
+    margin-bottom: 30px;
+  }
+  
+  .hero-section h1 {
+    font-size: 1.6rem;
+    line-height: 1.3;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  
+  .accordion-trigger {
+    padding: 18px 0;
+  }
+  
+  .accordion-trigger h3 {
+    font-size: 1.1rem;
+    line-height: 1.4;
+    padding-right: 10px;
+  }
+  
+  .icon {
+    font-size: 1.2rem;
+    flex-shrink: 0;
+  }
+  
+  .section-content {
+    font-size: 0.95rem;
+  }
+  
+  .section-content h4 {
+    font-size: 1rem;
+    margin: 20px 0 12px 0;
+  }
+  
+  .section-content h5 {
+    font-size: 0.95rem;
+    margin: 15px 0 10px 0;
+  }
+  
+  .table-wrapper {
+    margin: 15px -15px;
+    padding: 0 15px;
+  }
+  
+  .tech-table, .pricing-table {
+    font-size: 0.8rem;
+    min-width: 600px;
+    display: table;
+  }
+  
+  .tech-table th, .pricing-table th,
+  .tech-table td, .pricing-table td {
+    padding: 10px 8px;
+    white-space: nowrap;
+  }
+  
+  .tech-table td:last-child, .pricing-table td:last-child {
+    white-space: normal;
+    min-width: 200px;
+  }
+  
+  .total-row {
+    font-size: 1rem;
+    padding: 15px 8px;
+  }
+  
+  .guarantee-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .guarantee-card {
+    padding: 20px;
+  }
+  
+  .final-commitment {
+    padding: 40px 20px;
+    margin-top: 30px;
+  }
+  
+  .final-commitment h3 {
+    font-size: 1.4rem;
+  }
+  
+  .final-commitment h4 {
+    font-size: 1.2rem;
+    margin-top: 30px;
+  }
+  
+  .delivery-summary {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .delivery-item {
+    padding: 15px;
+  }
+  
+  .delivery-item strong {
+    font-size: 1rem;
+  }
+  
+  .delivery-item p {
+    font-size: 0.9rem;
+  }
+  
+  .investment-highlight {
+    padding: 20px;
+    margin-top: 30px;
+  }
+  
+  .investment-highlight h4 {
+    font-size: 1.5rem;
+  }
+  
+  .investment-highlight p {
+    font-size: 1rem;
+  }
+  
+  .justification-box {
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  .google-footer {
+    padding: 30px 20px;
+    font-size: 0.85rem;
+  }
+  
+  .watermark {
+    font-size: 4rem;
+    letter-spacing: 5px;
+  }
+  
+  .module-detail {
+    margin-bottom: 25px;
+  }
+  
+  .checkpoint {
+    margin-bottom: 20px;
+  }
+  
+  .api-endpoint {
+    margin-bottom: 20px;
+  }
+  
+  .api-endpoint pre {
+    font-size: 0.75rem;
+    overflow-x: auto;
+    padding: 10px;
+  }
+  
+  .timeline-summary {
+    margin-top: 30px;
+  }
+}
+
+/* Large Desktop (above 1440px) */
+@media (min-width: 1441px) {
+  .proposal-body {
+    padding: 50px 80px;
+    max-width: 1400px;
+  }
+  
+  .hero-section h1 {
+    font-size: 2.8rem;
+  }
+  
+  .subtitle {
+    font-size: 1.3rem;
+  }
+  
+  .section-content {
+    font-size: 1.05rem;
+  }
+  
+  .tech-table, .pricing-table {
+    font-size: 1rem;
+  }
+  
+  .tech-table th, .pricing-table th,
+  .tech-table td, .pricing-table td {
+    padding: 18px;
+  }
+}
+
+/* Extra Small Mobile (up to 480px) */
+@media (max-width: 480px) {
+  .google-header {
+    padding: 12px 15px;
+  }
+  
+  .nav-brand {
+    font-size: 1.3rem;
+  }
+  
+  .proposal-body {
+    padding: 15px 10px;
+  }
+  
+  .hero-section h1 {
+    font-size: 1.4rem;
+  }
+  
+  .subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .accordion-trigger h3 {
+    font-size: 1rem;
+  }
+  
+  .section-content {
+    font-size: 0.9rem;
+  }
+  
+  .watermark {
+    font-size: 3rem;
+  }
+  
+  .final-commitment {
+    padding: 30px 15px;
+  }
+  
+  .final-commitment h3 {
+    font-size: 1.2rem;
+  }
+}

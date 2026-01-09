@@ -1,0 +1,7 @@
+.blank-page {
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  /* Empty page - no content */
+}
+
