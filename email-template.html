@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Your Custom E-Commerce Platform Proposal</title>
+    <style>
+        /* Reset styles for email clients */
+        body, table, td, p, a, li, blockquote {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+        table, td {
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+        img {
+            -ms-interpolation-mode: bicubic;
+            border: 0;
+            outline: none;
+            text-decoration: none;
+        }
+        
+        /* Main styles */
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100% !important;
+            height: 100% !important;
+            background-color: #f5f5f5;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .email-wrapper {
+            max-width: 600px;
+            width: 100% !important;
+            margin: 0 auto;
+            background-color: #ffffff;
+        }
+        
+        /* Prevent horizontal scroll */
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        
+        .email-container {
+            width: 100%;
+            background-color: #ffffff;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #4285F4 0%, #34A853 100%);
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            margin: 0;
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        
+        .content {
+            padding: 40px 30px;
+            background-color: #ffffff;
+            width: 100%;
+        }
+        
+        .greeting {
+            font-size: 18px;
+            color: #202124;
+            margin-bottom: 20px;
+            line-height: 1.6;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        
+        .message {
+            font-size: 16px;
+            color: #3c4043;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 16px 40px;
+            background-color: #4285F4;
+            color: #ffffff !important;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            text-align: center;
+            margin: 20px 0;
+            box-shadow: 0 2px 8px rgba(66, 133, 244, 0.3);
+            max-width: 100%;
+            word-wrap: break-word;
+        }
+        
+        .cta-button:hover {
+            background-color: #1967d2;
+            box-shadow: 0 4px 12px rgba(66, 133, 244, 0.4);
+        }
+        
+        .button-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .divider {
+            height: 1px;
+            background-color: #e0e0e0;
+            margin: 30px 0;
+        }
+        
+        .footer {
+            padding: 30px;
+            background-color: #f8f9fa;
+            text-align: center;
+            border-top: 1px solid #e0e0e0;
+        }
+        
+        .footer-text {
+            font-size: 14px;
+            color: #70757a;
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        .footer-company {
+            font-size: 16px;
+            font-weight: 600;
+            color: #202124;
+            margin-bottom: 10px;
+        }
+        
+        .highlight {
+            color: #4285F4;
+            font-weight: 600;
+        }
+        
+        /* Mobile responsive */
+        @media only screen and (max-width: 600px) {
+            body {
+                width: 100% !important;
+                min-width: 100% !important;
+            }
+            
+            table[class="email-wrapper"] {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+            
+            .email-wrapper {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+            
+            table[role="presentation"] {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+            
+            td[class="content"] {
+                padding: 20px 15px !important;
+                width: 100% !important;
+            }
+            
+            .content {
+                padding: 20px 15px !important;
+                width: 100% !important;
+            }
+            
+            td[class="header"] {
+                padding: 25px 15px !important;
+                width: 100% !important;
+            }
+            
+            .header {
+                padding: 25px 15px !important;
+                width: 100% !important;
+            }
+            
+            .header h1 {
+                font-size: 22px !important;
+            }
+            
+            .greeting {
+                font-size: 16px !important;
+                word-wrap: break-word !important;
+                overflow-wrap: break-word !important;
+            }
+            
+            .message {
+                font-size: 14px !important;
+                word-wrap: break-word !important;
+                overflow-wrap: break-word !important;
+            }
+            
+            .cta-button {
+                padding: 14px 25px !important;
+                font-size: 14px !important;
+                width: auto !important;
+                max-width: 90% !important;
+                display: block !important;
+                margin: 20px auto !important;
+            }
+            
+            td[class="footer"] {
+                padding: 20px 15px !important;
+                width: 100% !important;
+            }
+            
+            .footer {
+                padding: 20px 15px !important;
+                width: 100% !important;
+            }
+            
+            .footer-text {
+                font-size: 13px !important;
+            }
+            
+            ul {
+                padding-left: 20px !important;
+                margin: 15px 0 !important;
+            }
+            
+            li {
+                font-size: 14px !important;
+                margin-bottom: 8px !important;
+                word-wrap: break-word !important;
+            }
+            
+            a {
+                word-wrap: break-word !important;
+                overflow-wrap: break-word !important;
+            }
+        }
+        
+        /* Extra small devices */
+        @media only screen and (max-width: 480px) {
+            .content {
+                padding: 15px 12px !important;
+            }
+            
+            .header {
+                padding: 20px 12px !important;
+            }
+            
+            .header h1 {
+                font-size: 20px !important;
+            }
+            
+            .greeting {
+                font-size: 15px !important;
+            }
+            
+            .message {
+                font-size: 13px !important;
+            }
+            
+            .cta-button {
+                padding: 12px 20px !important;
+                font-size: 13px !important;
+            }
+            
+            .footer {
+                padding: 15px 12px !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #f5f5f5; width: 100% !important; max-width: 100% !important;">
+        <tr>
+            <td align="center" style="padding: 20px 0; width: 100% !important;">
+                <table role="presentation" class="email-wrapper" cellspacing="0" cellpadding="0" border="0" width="600" style="width: 100% !important; max-width: 600px !important;">
+                    <!-- Header -->
+                    <tr>
+                        <td class="header" style="width: 100% !important;">
+                            <h1 style="margin: 0; word-wrap: break-word;">Codvertex</h1>
+                        </td>
+                    </tr>
+                    
+                    <!-- Content -->
+                    <tr>
+                        <td class="content" style="width: 100% !important;">
+                            <p class="greeting">
+                                <strong>Dear Sara,</strong>
+                            </p>
+                            
+                            <p class="message">
+                                Thank you for your interest in our <span class="highlight">Custom E-Commerce Platform</span> services. We are excited to present you with a comprehensive proposal tailored specifically for your business needs.
+                            </p>
+                            
+                            <p class="message">
+                                We have prepared a detailed quotation that includes:
+                            </p>
+                            
+                            <ul style="color: #3c4043; font-size: 16px; line-height: 1.8; padding-left: 20px;">
+                                <li>Complete technical architecture & module breakdown</li>
+                                <li>Detailed pricing with justifications</li>
+                                <li>Project timeline & delivery plan</li>
+                                <li>Performance guarantees & support policies</li>
+                            </ul>
+                            
+                            <p class="message">
+                                Please click on the link below to view your personalized proposal:
+                            </p>
+                            
+                            <div class="button-container">
+                                <a href="https://example.com/sara" class="cta-button" style="color: #ffffff; text-decoration: none;">
+                                    View Your Proposal
+                                </a>
+                            </div>
+                            
+                            <div class="divider"></div>
+                            
+                            <p class="message" style="font-size: 14px; color: #70757a; word-wrap: break-word; overflow-wrap: break-word;">
+                                If the button above doesn't work, please copy and paste the following link into your browser:<br>
+                                <a href="https://example.com/sara" style="color: #4285F4; word-break: break-all; word-wrap: break-word; overflow-wrap: break-word;">https://example.com/sara</a>
+                            </p>
+                            
+                            <p class="message" style="margin-top: 30px;">
+                                If you have any questions or would like to discuss the proposal in detail, please feel free to reach out to us. We're here to help!
+                            </p>
+                            
+                            <p class="message" style="margin-top: 20px;">
+                                Best regards,<br>
+                                <strong>The Codvertex Team</strong>
+                            </p>
+                        </td>
+                    </tr>
+                    
+                    <!-- Footer -->
+                    <tr>
+                        <td class="footer" style="width: 100% !important;">
+                            <p class="footer-company">Codvertex</p>
+                            <p class="footer-text">
+                                Custom Software Solutions<br>
+                                Building reliable, scalable business infrastructure
+                            </p>
+                            <p class="footer-text" style="margin-top: 15px; font-size: 12px;">
+                                This email was sent to Sara. If you have any questions, please contact us.
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
+

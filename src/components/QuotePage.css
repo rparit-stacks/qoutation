@@ -1,6 +1,7 @@
 .quote-wrapper {
   font-family: 'Roboto', Arial, sans-serif;
   width: 100%;
+  max-width: 100%;
   margin: 0 auto;
   padding: 0;
   background-color: #fff;
@@ -8,6 +9,7 @@
   position: relative;
   box-shadow: 0 0 20px rgba(0,0,0,0.1);
   color: #202124;
+  overflow-x: hidden;
 }
 
 .watermark {
@@ -66,6 +68,8 @@
   z-index: 1;
   max-width: 1200px;
   margin: 0 auto;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .hero-section {
@@ -362,8 +366,22 @@
 
 /* Mobile (up to 768px) */
 @media (max-width: 768px) {
+  * {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+  
   .quote-wrapper {
     box-shadow: none;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
   }
   
   .google-header {
@@ -371,20 +389,26 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 15px;
+    width: 100% !important;
+    max-width: 100% !important;
   }
   
   .nav-brand {
     font-size: 1.5rem;
+    word-wrap: break-word;
   }
   
   .client-badge {
     font-size: 0.85rem;
     padding: 6px 12px;
+    word-wrap: break-word;
   }
   
   .proposal-body {
     padding: 20px 15px;
-    max-width: 100%;
+    max-width: 100% !important;
+    width: 100% !important;
+    overflow-x: hidden !important;
   }
   
   .hero-section {
@@ -431,25 +455,56 @@
   }
   
   .table-wrapper {
-    margin: 15px -15px;
-    padding: 0 15px;
+    margin: 15px 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    display: block;
   }
   
   .tech-table, .pricing-table {
     font-size: 0.8rem;
     min-width: 600px;
     display: table;
+    width: 100%;
   }
   
   .tech-table th, .pricing-table th,
   .tech-table td, .pricing-table td {
     padding: 10px 8px;
-    white-space: nowrap;
+    word-wrap: break-word;
   }
   
   .tech-table td:last-child, .pricing-table td:last-child {
-    white-space: normal;
+    word-wrap: break-word;
     min-width: 200px;
+    max-width: 300px;
+  }
+  
+  .section-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    word-wrap: break-word;
+  }
+  
+  .accordion-trigger h3 {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  .accordion-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+  
+  pre {
+    overflow-x: auto;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    max-width: 100%;
   }
   
   .total-row {
