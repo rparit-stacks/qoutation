@@ -5,9 +5,9 @@ const CheckpointTracker = () => {
   // eslint-disable-next-line no-unused-vars
   const [paymentData, setPaymentData] = useState({
     totalAmount: 21000,
-    paidAmount: 1000, // Checkpoint 1 completed - ₹1,000 paid
-    currentRequested: 7000, // Next payment for Checkpoint 2
-    currentCheckpoint: 2, // Moving to Checkpoint 2
+    paidAmount: 0, // No payment received yet
+    currentRequested: 1000, // ₹1,000 pending for Checkpoint 1
+    currentCheckpoint: 1, // Currently on Checkpoint 1
     upiId: "9810167696@indie",
   })
 
