@@ -1,0 +1,6 @@
+/* Custom CSS Variables - Compatible with Tailwind v3 */
+:root {
+  --radius: 0.5rem;
+}
+
+/* Additional base styles if needed */
