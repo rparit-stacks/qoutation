@@ -4,10 +4,10 @@ import { ChevronDown, Check } from "lucide-react"
 const CheckpointTracker = () => {
   // eslint-disable-next-line no-unused-vars
   const [paymentData, setPaymentData] = useState({
-    totalAmount: 21000,
-    paidAmount: 0, // No payment received yet
-    currentRequested: 1000, // ₹1,000 pending for Checkpoint 1
-    currentCheckpoint: 1, // Currently on Checkpoint 1
+    totalAmount: 18000, // Updated total: ₹1,000 + ₹6,000 + ₹10,000 + ₹1,000 = ₹18,000
+    paidAmount: 1000, // ₹1,000 received for Checkpoint 1 - Nothing pending
+    currentRequested: 6000, // ₹6,000 for Checkpoint 2 (Frontend - Ongoing)
+    currentCheckpoint: 2, // Currently on Checkpoint 2 (Frontend)
     upiId: "9810167696@indie",
   })
 
@@ -114,9 +114,9 @@ const CheckpointTracker = () => {
     {
       id: 2,
       title: "Frontend Development & UI Implementation",
-      payment: 7000,
+      payment: 6000, // Updated: ₹6,000 (was ₹7,000)
       duration: "3 Days (2 dev + 1 review)",
-      status: "pending",
+      status: "in_progress", // Frontend ongoing
       deliverables: [
         "Fully functional frontend with all pages",
         "Responsive layouts tested on multiple devices",
@@ -323,7 +323,7 @@ const CheckpointTracker = () => {
     {
       id: 4,
       title: "Client Handover & Training",
-      payment: 3000,
+      payment: 1000, // Updated: ₹1,000 (was ₹3,000)
       duration: "1 Week (7 Days)",
       status: "pending",
       deliverables: [
