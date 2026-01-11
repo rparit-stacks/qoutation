@@ -5,9 +5,9 @@ const CheckpointTracker = () => {
   // eslint-disable-next-line no-unused-vars
   const [paymentData, setPaymentData] = useState({
     totalAmount: 21000,
-    paidAmount: 0,
-    currentRequested: 1000,
-    currentCheckpoint: 1,
+    paidAmount: 1000, // Checkpoint 1 completed - ₹1,000 paid
+    currentRequested: 7000, // Next payment for Checkpoint 2
+    currentCheckpoint: 2, // Moving to Checkpoint 2
     upiId: "9810167696@indie",
   })
 
@@ -18,9 +18,19 @@ const CheckpointTracker = () => {
   // Format: "checkpointId-subCheckpointIdx-itemIdx"
   // Example: "1-0-0" means Checkpoint 1, Sub-checkpoint 0, Item 0
   const [completedItems, setCompletedItems] = useState(new Set([
-    // Add completed items here, for example:
-    // "1-0-0", // Checkpoint 1, Sub-checkpoint 0, Item 0
-    // "1-0-1", // Checkpoint 1, Sub-checkpoint 0, Item 1
+    // Checkpoint 1 - All items completed
+    // Sub-checkpoint 0 (1.1): 6 items
+    "1-0-0", "1-0-1", "1-0-2", "1-0-3", "1-0-4", "1-0-5",
+    // Sub-checkpoint 1 (1.2): 4 items
+    "1-1-0", "1-1-1", "1-1-2", "1-1-3",
+    // Sub-checkpoint 2 (1.3): 5 items
+    "1-2-0", "1-2-1", "1-2-2", "1-2-3", "1-2-4",
+    // Sub-checkpoint 3 (1.4): 3 items
+    "1-3-0", "1-3-1", "1-3-2",
+    // Sub-checkpoint 4 (1.5): 5 items
+    "1-4-0", "1-4-1", "1-4-2", "1-4-3", "1-4-4",
+    // Sub-checkpoint 5 (1.6): 4 items
+    "1-5-0", "1-5-1", "1-5-2", "1-5-3",
   ]))
   
   // Developer notes
@@ -32,7 +42,7 @@ const CheckpointTracker = () => {
       title: "Planning & System Design",
       payment: 1000,
       duration: "1 Day",
-      status: "pending",
+      status: "completed", // Checkpoint 1 completed
       deliverables: [
         "Complete technical blueprint document",
         "Database ER diagram",
