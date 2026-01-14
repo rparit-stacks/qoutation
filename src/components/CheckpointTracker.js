@@ -5,9 +5,9 @@ const CheckpointTracker = () => {
   // eslint-disable-next-line no-unused-vars
   const [paymentData, setPaymentData] = useState({
     totalAmount: 18000, // Updated total: ₹1,000 + ₹6,000 + ₹10,000 + ₹1,000 = ₹18,000
-    paidAmount: 1000, // ₹1,000 received for Checkpoint 1 - Nothing pending
-    currentRequested: 6000, // ₹6,000 for Checkpoint 2 (Frontend - Ongoing)
-    currentCheckpoint: 2, // Currently on Checkpoint 2 (Frontend)
+    paidAmount: 12000, // ₹1,000 (Checkpoint 1) + ₹6,000 (Checkpoint 2) + ₹5,000 (part of backend) received
+    currentRequested: 6000, // ₹6,000 pending (final payment request)
+    currentCheckpoint: 3, // Currently on Checkpoint 3 (Backend & Mockup)
     upiId: "9810167696@indie",
   })
 
@@ -31,6 +31,17 @@ const CheckpointTracker = () => {
     "1-4-0", "1-4-1", "1-4-2", "1-4-3", "1-4-4",
     // Sub-checkpoint 5 (1.6): 4 items
     "1-5-0", "1-5-1", "1-5-2", "1-5-3",
+
+    // Checkpoint 2 (Frontend) - All items completed
+    // Sub-checkpoint 0 (2.1): 14 items
+    "2-0-0", "2-0-1", "2-0-2", "2-0-3", "2-0-4", "2-0-5", "2-0-6",
+    "2-0-7", "2-0-8", "2-0-9", "2-0-10", "2-0-11", "2-0-12", "2-0-13",
+    // Sub-checkpoint 1 (2.2): 4 items
+    "2-1-0", "2-1-1", "2-1-2", "2-1-3",
+    // Sub-checkpoint 2 (2.3): 5 items
+    "2-2-0", "2-2-1", "2-2-2", "2-2-3", "2-2-4",
+    // Sub-checkpoint 3 (2.4): 5 items
+    "2-3-0", "2-3-1", "2-3-2", "2-3-3", "2-3-4",
   ]))
   
   // Developer notes
@@ -116,7 +127,7 @@ const CheckpointTracker = () => {
       title: "Frontend Development & UI Implementation",
       payment: 6000, // Updated: ₹6,000 (was ₹7,000)
       duration: "3 Days (2 dev + 1 review)",
-      status: "in_progress", // Frontend ongoing
+      status: "completed", // Frontend completed
       deliverables: [
         "Fully functional frontend with all pages",
         "Responsive layouts tested on multiple devices",
@@ -179,7 +190,7 @@ const CheckpointTracker = () => {
       title: "Backend Development & Mockup Engine",
       payment: 10000,
       duration: "7-10 Days (4-7 dev + 1 review + 2 corrections)",
-      status: "pending",
+      status: "in_progress",
       deliverables: [
         "Complete backend APIs (all endpoints functional)",
         "Authentication system (Google OAuth + Email OTP)",
