@@ -798,7 +798,7 @@ const QuotePage = () => {
           <p><strong>Freedom to Modify:</strong> You have complete freedom to modify, extend, or customize the code as needed. The codebase is well-documented and follows best practices, making it easy for any competent developer to understand and modify.</p>
           
           <h4>7.4 Payment Milestones</h4>
-          <p>We recommend the following payment structure to align with development progress and ensure fair distribution of risk:</p>
+          <p>Below is the updated payment structure based on the actual amounts already paid and the remaining balance:</p>
           <table className="tech-table">
             <thead>
               <tr>
@@ -810,9 +810,9 @@ const QuotePage = () => {
             </thead>
             <tbody>
               <tr>
-                <td><strong>Project Start</strong></td>
-                <td>30%</td>
-                <td>₹6,300</td>
+                <td><strong>Initial Kickoff (Already Paid)</strong></td>
+                <td>Fixed</td>
+                <td>₹1,000</td>
                 <td>
                   <ul>
                     <li>Kickoff meeting and requirement finalization</li>
@@ -825,9 +825,9 @@ const QuotePage = () => {
                 </td>
               </tr>
               <tr>
-                <td><strong>After Frontend Completion</strong></td>
-                <td>30%</td>
-                <td>₹6,300</td>
+                <td><strong>After Frontend Completion (Already Paid)</strong></td>
+                <td>Fixed</td>
+                <td>₹6,000</td>
                 <td>
                   <ul>
                     <li>Fully functional frontend with all pages</li>
@@ -840,9 +840,9 @@ const QuotePage = () => {
                 </td>
               </tr>
               <tr>
-                <td><strong>After Backend + Mockup Engine</strong></td>
-                <td>30%</td>
-                <td>₹6,300</td>
+                <td><strong>After Backend + Mockup Engine (Already Paid)</strong></td>
+                <td>Fixed</td>
+                <td>₹10,000</td>
                 <td>
                   <ul>
                     <li>Complete backend APIs (all endpoints functional)</li>
@@ -857,9 +857,9 @@ const QuotePage = () => {
                 </td>
               </tr>
               <tr>
-                <td><strong>Final Delivery</strong></td>
-                <td>10%</td>
-                <td>₹2,100</td>
+                <td><strong>Final Delivery & Handover (Remaining)</strong></td>
+                <td>Balance</td>
+                <td>₹4,000</td>
                 <td>
                   <ul>
                     <li>Live production site deployed and accessible</li>
@@ -875,8 +875,8 @@ const QuotePage = () => {
               </tr>
             </tbody>
           </table>
+          <p><strong>Summary:</strong> Total project investment remains ₹21,000, of which ₹17,000 has already been paid (₹1,000 + ₹6,000 + ₹10,000). The remaining <strong>₹4,000</strong> is due upon final delivery and handover.</p>
           <p><strong>Payment Terms:</strong> Payments are due within 3 business days of milestone completion. We accept bank transfers, UPI, or other mutually agreed payment methods. All payments are in Indian Rupees (INR).</p>
-          <p><strong>Flexibility:</strong> Payment milestones can be adjusted based on your preferences, but the recommended structure balances risk for both parties and ensures steady progress throughout the project.</p>
         </div>
       )
     },
