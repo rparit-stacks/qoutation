@@ -4,10 +4,10 @@ import { ChevronDown, Check } from "lucide-react"
 const CheckpointTracker = () => {
   // eslint-disable-next-line no-unused-vars
   const [paymentData, setPaymentData] = useState({
-    totalAmount: 18000, // Updated total: ₹1,000 + ₹6,000 + ₹10,000 + ₹1,000 = ₹18,000
-    paidAmount: 12000, // ₹1,000 (Checkpoint 1) + ₹6,000 (Checkpoint 2) + ₹5,000 (part of backend) received
-    currentRequested: 6000, // ₹6,000 pending (final payment request)
-    currentCheckpoint: 3, // Currently on Checkpoint 3 (Backend & Mockup)
+    totalAmount: 22500, // Base ₹18,000 + Addons ₹4,500 (Currency 1K + WhatsApp Double 1K + Personalized Categories 500 + Swipe 2K)
+    paidAmount: 17000, // ₹1,000 + ₹6,000 + ₹10,000 — Backend COMPLETE
+    currentRequested: 5500, // ₹5,500 pending — Handover ₹1,000 + Addons ₹4,500
+    currentCheckpoint: 4, // Checkpoint 4 — Client Handover & Training (PENDING)
     upiId: "9810167696@indie",
   })
 
@@ -190,7 +190,7 @@ const CheckpointTracker = () => {
       title: "Backend Development & Mockup Engine",
       payment: 10000,
       duration: "7-10 Days (4-7 dev + 1 review + 2 corrections)",
-      status: "in_progress",
+      status: "completed", // Backend COMPLETE — Last module (Swipe Integration) pending as addon
       deliverables: [
         "Complete backend APIs (all endpoints functional)",
         "Authentication system (Google OAuth + Email OTP)",
@@ -337,7 +337,7 @@ const CheckpointTracker = () => {
     {
       id: 4,
       title: "Client Handover & Training",
-      payment: 1000, // Updated: ₹1,000 (was ₹3,000)
+      payment: 1000, // ₹1,000 — PENDING (Last module)
       duration: "1 Week (7 Days)",
       status: "pending",
       deliverables: [
@@ -347,6 +347,12 @@ const CheckpointTracker = () => {
         "Fully trained client on all platform features",
         "Client sign-off on final delivery",
         "30-day free support period begins",
+      ],
+      addonsAtHandover: [
+        { name: "Currency Multiplier", price: 1000 },
+        { name: "WhatsApp Double Integration", price: 1000 },
+        { name: "Personalized Categories", price: 500 },
+        { name: "Swipe Integration", price: 2000 },
       ],
       subCheckpoints: [
         {
@@ -594,6 +600,25 @@ const CheckpointTracker = () => {
               {/* Checkpoint Details */}
               {expandedCheckpoints.has(checkpoint.id) && (
                 <div className="border-t border-gray-200 px-6 py-6 bg-gray-50">
+                  {/* Addons at Handover - Highlight for Checkpoint 4 */}
+                  {checkpoint.addonsAtHandover && (
+                    <div className="mb-8 p-4 bg-green-50 border border-green-200 rounded-lg">
+                      <h4 className="text-sm font-semibold text-green-900 mb-3 uppercase tracking-wide">
+                        ✅ Addons (Included in Total — ₹4,500)
+                      </h4>
+                      <p className="text-xs text-green-800 mb-3">
+                        All 4 addons included. Total addons ₹4,500 + Handover ₹1,000 = Pending ₹5,500
+                      </p>
+                      <ul className="space-y-2">
+                        {checkpoint.addonsAtHandover.map((addon, idx) => (
+                          <li key={idx} className="flex justify-between text-sm text-green-900">
+                            <span>{addon.name}</span>
+                            <span className="font-semibold">₹{addon.price.toLocaleString()}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                   {/* Deliverables */}
                   <div className="mb-8">
                     <h4 className="text-sm font-semibold text-gray-900 mb-4 uppercase tracking-wide">Deliverables</h4>

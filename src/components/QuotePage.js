@@ -840,7 +840,7 @@ const QuotePage = () => {
                 </td>
               </tr>
               <tr>
-                <td><strong>After Backend + Mockup Engine (Already Paid)</strong></td>
+                <td><strong>After Backend + Mockup Engine (Already Paid) — ✅ COMPLETE</strong></td>
                 <td>Fixed</td>
                 <td>₹10,000</td>
                 <td>
@@ -857,9 +857,9 @@ const QuotePage = () => {
                 </td>
               </tr>
               <tr>
-                <td><strong>Final Delivery & Handover (Remaining)</strong></td>
+                <td><strong>Final Delivery & Handover (Remaining — Last Module Pending)</strong></td>
                 <td>Balance</td>
-                <td>₹4,000</td>
+                <td>₹1,000</td>
                 <td>
                   <ul>
                     <li>Live production site deployed and accessible</li>
@@ -875,7 +875,15 @@ const QuotePage = () => {
               </tr>
             </tbody>
           </table>
-          <p><strong>Summary:</strong> Total project investment remains ₹21,000, of which ₹17,000 has already been paid (₹1,000 + ₹6,000 + ₹10,000). The remaining <strong>₹4,000</strong> is due upon final delivery and handover.</p>
+          <p><strong>Summary:</strong> Total project investment is <strong>₹22,500</strong> (Base ₹18,000 + Addons ₹4,500). Backend is <strong>COMPLETE</strong>. ₹17,000 has been paid. The remaining <strong>₹5,500</strong> (Handover ₹1,000 + Addons ₹4,500) is due upon final delivery.</p>
+          <p><strong>Addons Included (Total ₹4,500):</strong></p>
+          <ul>
+            <li>Currency Multiplier: ₹1,000</li>
+            <li>WhatsApp Double Integration: ₹1,000</li>
+            <li>Personalized Categories: ₹500</li>
+            <li>Swipe Integration: ₹2,000</li>
+          </ul>
+          <p><strong>Pending:</strong> Handover ₹1,000 + Addons ₹4,500 = <strong>₹5,500</strong></p>
           <p><strong>Payment Terms:</strong> Payments are due within 3 business days of milestone completion. We accept bank transfers, UPI, or other mutually agreed payment methods. All payments are in Indian Rupees (INR).</p>
         </div>
       )
